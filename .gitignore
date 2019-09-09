@@ -1,0 +1,4 @@
+.pio
+/cmake-build-debug/
+src/WifiSecrets.h
+src/WhoIsThis.h
