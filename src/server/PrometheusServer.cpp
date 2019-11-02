@@ -77,7 +77,7 @@ void PrometheusServer::handleRequest(
 
 void PrometheusServer::setup() {
     server = new WiFiServer(80);
-    WiFi.setHostname()
+    WiFi.setHostname(HOSTNAME);
 
     if (WiFi.status() == WL_NO_MODULE) {
         Serial.println("Communication with WiFi module failed!");

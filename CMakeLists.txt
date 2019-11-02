@@ -80,4 +80,4 @@ add_custom_target(
     WORKING_DIRECTORY ${CMAKE_CURRENT_SOURCE_DIR}
 )
 
-add_executable(${PROJECT_NAME} ${SRC_LIST} src/server/PrometheusServer.cpp src/server/PrometheusServer.h src/WifiSecrets.h)
+add_executable(${PROJECT_NAME} ${SRC_LIST} src/server/PrometheusServer.cpp src/server/PrometheusServer.h src/WifiSecrets.h src/Hostname.h src/captive/CaptivePortal.cpp src/captive/CaptivePortal.h src/networking/NetworkServer.cpp src/networking/NetworkServer.h src/eeprom/EepromData.cpp src/eeprom/EepromData.h)

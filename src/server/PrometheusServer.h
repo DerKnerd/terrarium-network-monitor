@@ -9,6 +9,7 @@
 #include <WiFiNINA.h>
 #include <WhoIsThis.h>
 #include <WifiSecrets.h>
+#include <Hostname.h>
 #include <utility/wifi_drv.h>
 
 class PrometheusServer {
