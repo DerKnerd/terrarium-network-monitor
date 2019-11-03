@@ -30,30 +30,33 @@ void PrometheusServer::handleRequest(
 
                     Serial.print(F("Writing hot side: "));
                     Serial.println(hotSideTemp);
-                    client.println(F("# HELP ardu_terra_hot_side The temperature on the hot side of the terrarium"));
-                    client.println(F("# TYPE ardu_terra_hot_side gauge"));
+                    client.print(F("# HELP ardu_terra_hot_side The temperature on the hot side of the terrarium\n"));
+                    client.print(F("# TYPE ardu_terra_hot_side gauge\n"));
                     client.print(F("ardu_terra_hot_side{who=\""));
                     client.print(WHOISTHIS);
                     client.print(F("\"} "));
-                    client.println(hotSideTemp);
+                    client.print(hotSideTemp);
+                    client.print("\n");
 
                     Serial.print(F("Writing cold side: "));
                     Serial.println(coldSideTemp);
-                    client.println(F("# HELP ardu_terra_cold_side The temperature on the cold side of the terrarium"));
-                    client.println(F("# TYPE ardu_terra_cold_side gauge"));
+                    client.print(F("# HELP ardu_terra_cold_side The temperature on the cold side of the terrarium\n"));
+                    client.print(F("# TYPE ardu_terra_cold_side gauge\n"));
                     client.print(F("ardu_terra_cold_side{who=\""));
                     client.print(WHOISTHIS);
                     client.print(F("\"} "));
-                    client.println(coldSideTemp);
+                    client.print(coldSideTemp);
+                    client.print("\n");
 
                     Serial.print(F("Writing humidity: "));
                     Serial.println(humidity);
-                    client.println(F("# HELP ardu_terra_humidity The humidity of the terrarium"));
-                    client.println(F("# TYPE ardu_terra_humidity gauge"));
+                    client.print(F("# HELP ardu_terra_humidity The humidity of the terrarium\n"));
+                    client.print(F("# TYPE ardu_terra_humidity gauge\n"));
                     client.print(F("ardu_terra_humidity{who=\""));
                     client.print(WHOISTHIS);
                     client.print(F("\"} "));
-                    client.println(humidity);
+                    client.print(humidity);
+                    client.print("\n");
                     break;
                 }
                 if (c == '\n') {
