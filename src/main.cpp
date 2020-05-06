@@ -18,8 +18,8 @@ void setup() {
 
 void loop() {
     server->handleRequest(
-            thermometer->getTemperature(1),
             thermometer->getTemperature(0),
+            thermometer->getTemperature(1),
             humidity->getHumidity()
     );
 }

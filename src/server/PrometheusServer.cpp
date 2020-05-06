@@ -80,7 +80,6 @@ void PrometheusServer::handleRequest(
 
 void PrometheusServer::setup() {
     server = new WiFiServer(80);
-    WiFi.setHostname(HOSTNAME);
 
     if (WiFi.status() == WL_NO_MODULE) {
         Serial.println("Communication with WiFi module failed!");
@@ -123,6 +122,7 @@ void PrometheusServer::setup() {
         Serial.print(F("Connected to SSID "));
         Serial.println(WIFI_SSID);
     }
+    WiFi.setHostname(HOSTNAME);
 
     Serial.print(F("IP address: "));
     Serial.print(getIpAddress());
